@@ -18,4 +18,11 @@ def find_dates(text):
         r'\d{1,2}(?:st|nd|rd|th)? of (?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*'
     ]
     
-    
+    found_dates = []
+
+    # Loop through every pattern and see if it matches anything in the text
+    for pattern in patterns:
+        matches = re.findall(pattern, text, re.IGNORECASE) # ignores upper/lower case means
+        found_dates.extend(matches)
+        
+    return found_dates
