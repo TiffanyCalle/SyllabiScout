@@ -27,6 +27,7 @@ def find_dates(text):
         
     return found_dates
 
+
 # read from file made in reader.py
 try:
     with open("collected_info.txt", "r") as f:
